@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Design System Specimen</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="specimen.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Design System Specimen</h1>
+            <p>A Comprehensive and Evolving Design Guide</p>
+        </header>
+        <main>
+            <section class="card" id="S1">
+                <h2>Foundation and reset</h2>
+                <p>Reset rules that were applied:</p>
+                <dl>
+                    <dt>*, *::before, *::after { box-sizing: border-box; }</dt>
+                    <dd>This makes calculating the entire box size easier, as padding and border are included.</dd>
+                    <dt>*, *::before, *::after { padding:0; }</dt>
+                    <dd>Resetting the padding globally allows me to ensure that padding is consistent across the entire design.</dd>
+                    <dt>body, h1, h2, p, ul, figure { margin: 0; }</dt>
+                    <dd>Removes margins from the above items, allowing for more precise spacing.</dd>
+                    <dt>button { font: inherit; border: none }</dt>
+                    <dd>Sets button font to match body font, and removes the button border for a cleaner look.</dd>
+                    <dt>Omitted: border:0</dt>
+                    <dd>I would rather override borders as I come across them, rather than potentially remove one that should be there for accessibility purposes.</dd>
+                    <dt>Omitted: font:inherit</dt>
+                    <dd>I wanted to avoid having to restyle every single text item, which is what this command would require. It is more efficient to adjust styling as needed.</dd>
+                </dl>
+            </section>
+            <section class="card" id="S2">
+                <h2>Token inventory</h2>
+                <p>Below you can see each root token that is used, as well 
+                    as it's rendered value and a description of its intended use.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Token Name</th>
+                            <th>Rendered Value</th>
+                            <th>Intended Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="code"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="code"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="code"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="card" id="S3">
+                <h2>Typography</h2>
+                <p>Body stack info</p>
+                <p>Display stack info</p>
+                <p>source/license note</p>
+                <h3>Typography Samples</h3>
+                <div class="sample">
+                    <h1>Level 1 Heading Sample</h1>
+                    <h2>Level 2 Heading Sample</h2>
+                    <h3>Level 3 Heading Sample</h3>
+                    <h4>Level 4 Heading Sample</h4>
+                    <h5>Level 5 Heading Sample</h5>
+                    <h6>Level 6 Heading Sample</h6>
+                </div>
+                <div class="sample">
+                    <p>This is a paragraph sample. Paragraphs are made up of a series of sentences. 
+                    The sentences in a paragraph are usually on a related topic, and all bring 
+                    a singular point into focus. Each sentence is made up of words, spaces and 
+                    punctuation symbols. These words and symbols are called characters. The 
+                    Latin alphabet, which is the standard for the English language you are 
+                    reading, is made up of 26 letter characters. It also makes use of 10 
+                    digit characters (0123456789), and a plethora of punctuation marks, 
+                    such as commas&nbsp;(&nbsp;,&nbsp;) periods&nbsp;(&nbsp;.&nbsp;) 
+                    colons&nbsp;(&nbsp;:&nbsp;) semi-colons&nbsp;(&nbsp;;&nbsp;) 
+                    question&nbsp;marks&nbsp;(&nbsp;?&nbsp;) 
+                    exclamation&nbsp;points&nbsp;(&nbsp;!&nbsp;) and many more.</p>
+                </div>
+                <div class="sample">
+                    <ul>
+                        <li>Unordered List Item</li>
+                        <li>Unordered List Item</li>
+                        <li>Unordered List Item</li>
+                    </ul>
+                    <ol>
+                        <li>Ordered List Item</li>
+                        <li>Ordered List Item</li>
+                        <li>Ordered List Item</li>
+                    </ol>
+                </div>
+                <div class="sample">
+                    <span class="metadata">Sample Metadata</span>
+                    <p>This sample has <code>inline code</code> included, as well 
+                        as a <a href="#">Link</a>.</p>
+                </div>
+                <div class="sample">
+                    <p id="short">This paragraph uses a short line length. Its intended 
+                        use is either for small screens, narrow content, or as supporting text.</p>
+                    <p id="medium">This paragraph uses our standard (or medium) line length. 
+                        It is intended for use in most scenarios, on medium and large 
+                        size devices for paragraphs, headings, and most other typography.</p>
+                    <p id="long">This paragraph has a long line length. It should be used very 
+                        sparingly, with its ideal use being important headings or callouts.</p>
+                </div>
+                <div class="sample">
+                    <table>
+                        <caption>Responsive Typography Scale Samples</caption>
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Small Screen</th>
+                                <th>Medium Screen</th>
+                                <th>Large Screen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Body</td>
+                                <td>sm size</td>
+                                <td>med size</td>
+                                <td>large size</td>
+                            </tr>
+                            <tr>
+                                <td>Heading 3</td>
+                                <td>sm size</td>
+                                <td>med size</td>
+                                <td>large size</td>
+                            </tr>
+                            <tr>
+                                <td>Heading 2</td>
+                                <td>sm size</td>
+                                <td>med size</td>
+                                <td>large size</td>
+                            </tr>
+                            <tr>
+                                <td>Heading 1</td>
+                                <td>sm size</td>
+                                <td>med size</td>
+                                <td>large size</td>
+                            </tr>
+                            <tr>
+                                <td>Metadata</td>
+                                <td>sm size</td>
+                                <td>med size</td>
+                                <td>large size</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="sample">
+                    <h2>Regular Heading Text</h2>
+                    <h2 class="fallback1-display">First Fallback Heading</h2>
+                    <h2 class="fallback2-display">Second Fallback Heading</h2>
+                    <h2 class="fallback1-display">Default Fallback Heading</h2>
+                    <p>Regular body text sample.</p>
+                    <p class="fallback1-body">First fallback body text sample.</p>
+                    <p class="fallback2-body">Second fallback body text sample.</p>
+                    <p class="default-body">Default fallback body text sample.</p>
+                </div>
+            </section>
+            <section class="card" id="S4">
+                <h2>Actions and States</h2>
+                <p><a href="#s4">Text Link</a></p>
+                <div class="sample">
+                    <div>
+                        <p>Default Buttons</p>
+                        <button class="primary-button" type="button">Default</button>
+                        <button class="primary-button primary-button-hover" type="button">Hover</button>
+                        <button class="primary-button primary-button-active" type="button">Active</button>
+                        <button class="primary-button primary-button-focus" type="button">Focus</button>
+                        <button class="primary-button primary-button-disabled" type="button" disabled>Disabled</button>
+                    </div>
+                    <div>
+                        <p>Secondary Buttons</p>
+                        <button class="secondary-button secondary-button" type="button">Default</button>
+                        <button class="secondary-button secondary-button-hover"  type="button">Hover</button>
+                        <button class="secondary-button secondary-button-active"  type="button">Active</button>
+                        <button class="secondary-button secondary-button-focus"  type="button">Focus</button>
+                        <button class="secondary-button secondary-button-disabled"  type="button" disabled>Disabled</button>
+                    </div>
+                </div>
+            </section>
+            <section class="card" id="S5">
+                <h2>Surfaces and Content Patterns</h2>
+                <div class="card">
+                    <h3>Heading</h3>
+                    <span class="metadata">Subheading</span>
+                    <p>Content paragraph goes here. You can put as much or as 
+                        little type into each card as you like.</p>
+                </div>
+                <div class="card alt-sample">
+                    <h3>Heading</h3>
+                    <span class="metadata">Subheading</span>
+                    <p>Content paragraph goes here. You can put as much or as 
+                        little type into each card as you like.</p>
+                </div>
+                <div class="callout-sample">
+                    <h3>Heading</h3>
+                    <span class="metadata">Subheading</span>
+                    <p>Content paragraph goes here. You can put as much or as 
+                        little type into each card as you like.</p>
+                </div>
+            </section>
+            <section class="card">
+                <h2>Control Foundations</h2>
+                <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
+                    <label for="name">This is a Label</label>
+                    <input type="text" name="name" id="name" placeholder="This is a text input.">
+                    <fieldset> 
+                        <legend>This is a Fieldset Legend</legend> 
+                        <input type="checkbox" id="checkbox1" name="checkbox1" value="Checkbox1">
+                        <label for="checkbox1"> Checkbox Option 1</label><br>
+                        <input type="checkbox" id="checkbox2" name="checkbox2" value="Checkbox2">
+                        <label for="checkbox2"> Checkbox Option 2</label><br>
+                        <input type="checkbox" id="checkbox3" name="checkbox3" value="Checkbox3">
+                        <label for="checkbox3"> Checkbox Option 3</label>
+                        
+                    </fieldset>
+                    <input type="radio" id="radio1" name="radio1" value="Radio1">
+                    <label for="radio1">Radio Option 1</label> 
+                    <input type="radio" id="radio2" name="radio2" value="Radio2">
+                    <label for="radio2">Radio Option 2</label>   
+                    <label for="selection">Choose an Option:</label>
+                    <select id="selection" name="selection">
+                        <option value="Select1">Option 1</option>
+                        <option value="Select1">Option 2</option>
+                        <option value="Select1">Option 3</option>
+                    </select>
+                    <button type="submit">Submit Button</button>
+                    
+                </form>
+            </section>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>

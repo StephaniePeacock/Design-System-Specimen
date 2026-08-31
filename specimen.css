@@ -1,0 +1,25 @@
+:root {
+    --color-surface: #FCF5FE;
+    --color-card: #ECDCF1;
+    --color-accent: #AA7BB8;
+    --color-heading: #551866;
+    --color-body: #280233;
+    --color-notice: #FFB006;
+    --color-action: #3CAB8C;
+}
+
+*, *::before, *::after { 
+    box-sizing: border-box; 
+}
+
+body, h1, h2, p, ul, figure {
+    margin: 0; /* removes the white margin around the edges of the entire page  - the header color now appears full-bleed */
+}
+
+button {
+    font: inherit; /* resets the styling on the button text, so it matches the tokenized action 'button' */
+    border: none;  /* removes the outer border to match the tokenized action 'button' */
+}
+
+
+
