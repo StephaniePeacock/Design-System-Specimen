@@ -1,18 +1,29 @@
 :root {
-    --color-surface: #FCF5FE;
-    --color-card: #ECDCF1;
+    --color-surface: #ECDCF1;
+    --color-card: #FCF5FE;
     --color-accent: #AA7BB8;
     --color-heading: #551866;
     --color-body: #280233;
+    --color-shadow: #28023350;
     --color-notice: #FFB006;
     --color-action: #3CAB8C;
-}
+    --card-radius: .75rem;
+    --body-font: "Roboto Mono", Consolas, ui-monospace, 'Source Code Pro', Menlo, monospace;
+    --display-font: "Michroma", Corbel, Tahoma, Avenir, Montserrat,  sans-serif;
+    --base-font-size: 10px;
+    --scaled-font: clamp(1.2rem, 3vw, 2rem);
+    --line-height: calc(var(--scaled-font)*1.8);
+    --measure: clamp(35ch, 80vw, 75ch);
+    --space-card: clamp(2rem, 4vw, 3rem);
 
+}
+/* Selective Reset */
 *, *::before, *::after { 
     box-sizing: border-box; 
+    padding: 0;
 }
 
-body, h1, h2, p, ul, figure {
+body, h1, h2, h3, h4, h5, h6, p, ul, figure, section {
     margin: 0; /* removes the white margin around the edges of the entire page  - the header color now appears full-bleed */
 }
 
@@ -21,5 +32,63 @@ button {
     border: none;  /* removes the outer border to match the tokenized action 'button' */
 }
 
+/* Styling */
+html {
+    font-size: var(--base-font-size);
+}
 
+body {
+    background-color: var(--color-surface);
+    color: var(--color-body);
+    font-size: var(--scaled-font);
+    line-height: var(--line-height);
+}
 
+h1, h2, h3, h4, h5, h6, dt, th, .metadata, header p {
+    font-family: var(--display-font);
+    font-weight: bold;
+    color: var(--color-heading);
+}
+
+header {
+    background-color: var(--color-heading);
+    padding: var(--space-card);
+    margin-bottom: var(--space-card);
+    line-height: calc(var(--line-height)*1.3);
+}
+
+header h1, header p {
+    color: var(--color-card);
+}
+
+main { 
+    display: grid; 
+    max-width: 100rem; 
+    margin: 0 auto;
+}
+
+.card { 
+    padding: var(--space-card); 
+    background: var(--color-card); 
+    border: 1px solid #d0d0d0; 
+    border-radius: .5rem; 
+    font-family: var(--body-font);
+    margin: var(--base-font-size);
+    box-shadow: 2px 2px 5px var(--color-shadow);
+}
+
+h1 {
+    margin: var(--space-card) 0;
+}
+
+h2, h3, h4, h5, h6 {
+    margin: var(--base-font-size) 0;
+}
+
+p {
+    margin: var(--base-font-size) 0;
+}
+
+.metadata, th, dt {
+    font-size: calc(var(--scaled-font)*.8);
+}

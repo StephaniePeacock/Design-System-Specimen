@@ -4,6 +4,9 @@
         <meta charset="utf-8" />
         <title>Design System Specimen</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="specimen.css" />
     </head>
     <body>
@@ -16,17 +19,17 @@
                 <h2>Foundation and reset</h2>
                 <p>Reset rules that were applied:</p>
                 <dl>
-                    <dt>*, *::before, *::after { box-sizing: border-box; }</dt>
+                    <dt class="metadata">*, *::before, *::after { box-sizing: border-box; }</dt>
                     <dd>This makes calculating the entire box size easier, as padding and border are included.</dd>
-                    <dt>*, *::before, *::after { padding:0; }</dt>
+                    <dt class="metadata">*, *::before, *::after { padding:0; }</dt>
                     <dd>Resetting the padding globally allows me to ensure that padding is consistent across the entire design.</dd>
-                    <dt>body, h1, h2, p, ul, figure { margin: 0; }</dt>
+                    <dt class="metadata">body, h1, h2, p, ul, figure { margin: 0; }</dt>
                     <dd>Removes margins from the above items, allowing for more precise spacing.</dd>
-                    <dt>button { font: inherit; border: none }</dt>
+                    <dt class="metadata">button { font: inherit; border: none }</dt>
                     <dd>Sets button font to match body font, and removes the button border for a cleaner look.</dd>
-                    <dt>Omitted: border:0</dt>
+                    <dt class="metadata">Omitted: border: 0</dt>
                     <dd>I would rather override borders as I come across them, rather than potentially remove one that should be there for accessibility purposes.</dd>
-                    <dt>Omitted: font:inherit</dt>
+                    <dt class="metadata">Omitted: font: inherit</dt>
                     <dd>I wanted to avoid having to restyle every single text item, which is what this command would require. It is more efficient to adjust styling as needed.</dd>
                 </dl>
             </section>
@@ -45,17 +48,17 @@
                     <tbody>
                         <tr>
                             <td class="code"></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="code"></td>
-                            <td></td>
+                            <td><span class="color-swatch"></span></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td class="code"></td>
+                            <td><span class="color-swatch"></span></td>
                             <td></td>
+                        </tr>
+                        <tr>
+                            <td class="code"></td>
+                            <td><span class="color-swatch"></span></td>
                             <td></td>
                         </tr>
                     </tbody>
