@@ -83,6 +83,7 @@ main {
     box-shadow: 2px 2px 5px var(--color-shadow);
     display: grid;
 }
+
 .compact-label {
     background-color: var(--color-accent-shadow);
     color: var(--color-heading);
@@ -289,9 +290,26 @@ button:disabled, .primary-button-disabled, .secondary-button-disabled {
     background-color: var(--color-notice);
     border: 3px solid var(--color-action);
 }
+form {
+    display: flex;
+    flex-direction: column;
+}
+label, legend {
+    font-family: var(--display-font);
+    font-size: calc(var(--scaled-font)*.8);
+}
 
-compact-label
+legend { font-weight: bold; font-variant: small-caps;}
+input, select { padding: var(--base-font-size); }
+input[type="checkbox"], input[type="radio"] {
+    width: var(--scaled-font);
+    height: var(--scaled-font);
+}
 
+button[type="submit"] {
+    width: 50%;
+    margin: var(--base-font-size) auto;
+}
 
 /* Table styling for mobile devices */
 @media screen and (max-width:767px) {
