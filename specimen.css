@@ -2,6 +2,7 @@
     --color-surface: #ECDCF1;
     --color-card: #FCF5FE;
     --color-accent: #AA7BB8;
+    --color-accent-shadow: #AA7BB850;
     --color-heading: #551866;
     --color-body: #280233;
     --color-shadow: #28023350;
@@ -82,6 +83,25 @@ main {
     box-shadow: 2px 2px 5px var(--color-shadow);
     display: grid;
 }
+.compact-label {
+    background-color: var(--color-accent-shadow);
+    color: var(--color-heading);
+    font-variant: small-caps;
+    padding: var(--base-font-size);
+    margin: var(--base-font-size);
+    border-radius: var(--base-font-size);
+    font-weight: bold;
+}
+
+.alt-sample { background: var(--color-heading); }
+.alt-sample .metadata, .alt-sample h3, .alt-sample p { color: var(--color-card); }
+.alt-sample .metadata { color: var(--color-notice); }
+.alt-sample .compact-label { color: var(--color-body); background-color: var(--color-notice);}
+
+.callout-sample { background: var(--color-notice); }
+.callout-sample .metadata, .callout-sample h3, .callout-sample p { color: var(--color-body); }
+.callout-sample .metadata { color: var(--color-heading); }
+.callout-sample .compact-label { color: var(--color-body); background-color: var(--color-action);}
 
 h1 {
     margin: var(--space-card) 0;
@@ -130,33 +150,13 @@ th {
     border-radius: 50%;
 }
 
-.color-card {
-    background-color: var(--color-card);
-}
-
-.color-accent {
-    background-color: var(--color-accent);
-}
-
-.color-heading {
-    background-color: var(--color-heading);
-}
-
-.color-body {
-    background-color: var(--color-body);
-}
-
-.color-notice {
-    background-color: var(--color-notice);
-}
-
-.color-action {
-    background-color: var(--color-action);
-}
-
-.display-font {
-    font-family: var(--display-font);
-}
+.color-card { background-color: var(--color-card); }
+.color-accent { background-color: var(--color-accent); }
+.color-heading { background-color: var(--color-heading); }
+.color-body { background-color: var(--color-body); }
+.color-notice { background-color: var(--color-notice); }
+.color-action { background-color: var(--color-action); }
+.display-font { font-family: var(--display-font); }
 .code, code {
     font-family: var(--display-font);
     color: var(--color-heading);
@@ -290,7 +290,7 @@ button:disabled, .primary-button-disabled, .secondary-button-disabled {
     border: 3px solid var(--color-action);
 }
 
-
+compact-label
 
 
 /* Table styling for mobile devices */
@@ -339,7 +339,7 @@ button:disabled, .primary-button-disabled, .secondary-button-disabled {
 	#type-table td:nth-of-type(3):before { content: 'Medium Screen';}
     #type-table td:nth-of-type(4):before { content: 'Large Screen';}
 
-    button, .primary-button {
+    button, .primary-button, .secondary-button {
         width: calc(var(--scaled-font) * 10);
     }
 }
