@@ -80,6 +80,7 @@ main {
     font-family: var(--body-font);
     margin: var(--base-font-size);
     box-shadow: 2px 2px 5px var(--color-shadow);
+    display: grid;
 }
 
 h1 {
@@ -91,7 +92,7 @@ h2, h3, h4, h5, h6 {
 }
 
 p {
-    margin: var(--base-font-size) auto;
+    margin: var(--base-font-size) calc(var(--base-font-size)*2);
     max-width: var(--measure);
 }
 
@@ -176,16 +177,30 @@ a {
     text-decoration: none;
     color: var(--color-action);
     font-weight: bold;
-    
+    padding: calc(var(--base-font-size)/2);
 }
 
-a:hover, a:focus {
+.flex {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+a:focus, .focus-link {
+    color: var(--color-heading);
     text-decoration: underline;
     border: 3px solid var(--color-notice);
     padding: calc(var(--base-font-size)/2);
     border-radius: .75rem;
     outline: none;
 }
+
+a:hover, .hover-link {
+    text-decoration: underline;
+    color: var(--color-heading);
+}
+
+.visited-link { color: var(--color-accent);}
 
 ul, ol {
     padding: 0 calc(var(--scaled-font)*2);
@@ -225,6 +240,58 @@ li::marker {
 .short { max-width: 35ch; }
 .medium { max-width: 55ch; }
 .long { max-width: 75ch; }
+
+button, .primary-button, .secondary-button {
+    width: calc(var(--scaled-font) * 8);
+    padding: calc(var(--scaled-font) * .7) calc(var(--scaled-font) * 1.1);
+    margin: calc(var(--scaled-font) / 2);
+    border-radius: var(--base-font-size);
+    color: var(--color-card);
+    background-color: var(--color-heading);
+    font-family: var(--display-font);
+    font-weight: bold;
+    font-variant: small-caps;
+}
+.primary-button-hover{
+    color: var(--color-body);
+    background-color: var(--color-accent);
+}
+.primary-button-active{
+    color: var(--color-body);
+    background-color: var(--color-action);
+}
+.primary-button-focus{
+    color: var(--color-body);
+    background-color: var(--color-action);
+    border: 3px solid var(--color-notice);
+}
+button:disabled, .primary-button-disabled, .secondary-button-disabled {
+    color: var(--color-accent);
+    background-color: var(--color-card);
+    border: 1px solid var(--color-surface);
+}
+
+.secondary-button {
+    color: var(--color-body);
+    background-color: var(--color-surface);
+}
+
+.secondary-button-hover{
+    color: var(--color-surface);
+    background-color: var(--color-heading);
+}
+.secondary-button-active{
+    color: var(--color-body);
+    background-color: var(--color-notice);
+}
+.secondary-button-focus{
+    color: var(--color-body);
+    background-color: var(--color-notice);
+    border: 3px solid var(--color-action);
+}
+
+
+
 
 /* Table styling for mobile devices */
 @media screen and (max-width:767px) {
@@ -271,4 +338,8 @@ li::marker {
 	#type-table td:nth-of-type(2):before { content: 'Small Screen';}
 	#type-table td:nth-of-type(3):before { content: 'Medium Screen';}
     #type-table td:nth-of-type(4):before { content: 'Large Screen';}
+
+    button, .primary-button {
+        width: calc(var(--scaled-font) * 10);
+    }
 }
