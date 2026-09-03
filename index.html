@@ -17,6 +17,7 @@
         <main>
             <section class="card" id="S1">
                 <h2>Foundation and reset</h2>
+                <hr>
                 <p>Reset rules that were applied:</p>
                 <dl>
                     <dt class="metadata">*, *::before, *::after { box-sizing:border-box; }</dt>
@@ -35,9 +36,10 @@
             </section>
             <section class="card" id="S2">
                 <h2>Token inventory</h2>
+                <hr>
                 <p>Below you can see each root token that is used, as well 
                     as it's rendered value and a description of its intended use.</p>
-                <table>
+                <table id="tokens-table">
                     <thead>
                         <tr>
                             <th>Token Name</th>
@@ -82,26 +84,50 @@
                             <td>Active Item Background & Border</td>
                         </tr>
                         <tr>
-                            <td class="code"></td>
-                            <td><span class="body-font"></span></td>
-                            <td></td>
+                            <td class="code">--body-font</td>
+                            <td><span>Type</span></td>
+                            <td>Body Type</td>
+                        </tr>
+                        <tr>
+                            <td class="code">--display-font</td>
+                            <td><span class="display-font">Type</span></td>
+                            <td>Headings, Metadata, Compact Label, Code</td>
                         </tr>
                     </tbody>
                 </table>
             </section>
             <section class="card" id="S3">
                 <h2>Typography</h2>
-                <p>Body stack info</p>
-                <p>Display stack info</p>
-                <p>source/license note</p>
+                <hr>
+                <p>The body font stack Uses Google Font "Roboto Mono" as the preferred 
+                    font, with fallback fonts for all major OS types. The OS fallbacks 
+                    are: Consolas (Windows 7+), ui-monospace (displayed as SF Mono on 
+                    macOS 10.15+ , iOS 13.3+), "Source Code Pro" (Linux), Menlo (macOS) 
+                    and the final fallback of monospace.</p>
+                <p>The display font stack uses Google Font "Michroma" as the preferred 
+                    font, and also has fallbacks for all major OS types. The OS fallbacks 
+                    are: Corbel (Windows 7+), Tahoma (Windows), Avenir (macOS 10.8+, iOS 6+), 
+                    Montserrat (Linux), and the final fallback of sans-serif.
+                </p>
+                <p><a href="https://fonts.google.com/specimen/Roboto+Mono/license?preview.layout=grid&query=roboto+mono&preview.script=Latn" target="_blank">"Roboto&nbsp;Mono"</a> 
+                    and <a href="https://fonts.google.com/specimen/Michroma/license?preview.layout=grid&query=michroma&preview.script=Latn" target="_blank">"Michroma"</a> 
+                    are both licensed under the SIL Open Font License, and allows for free 
+                    usage, with main limitations on distribution for monetary gain, and 
+                    altering of the license during distribution, neither of 
+                    which apply to our usage. Fallback fonts were chosen from 
+                    <a href="https://github.com/system-fonts/modern-font-stacks/blob/main/README.md" target="_blank">Modern&nbsp;Font&nbsp;Stacks</a>
+                    lists, and are licensed under Creative Commons 0, which 
+                    also allows for free use, excluding liability, trademark, patent and warranty.</p>
+                <br>
                 <h3>Typography Samples</h3>
+                <hr>
                 <div class="sample">
-                    <h1>Level 1 Heading Sample</h1>
-                    <h2>Level 2 Heading Sample</h2>
-                    <h3>Level 3 Heading Sample</h3>
-                    <h4>Level 4 Heading Sample</h4>
-                    <h5>Level 5 Heading Sample</h5>
-                    <h6>Level 6 Heading Sample</h6>
+                    <h1>Level 1 Heading</h1>
+                    <h2>Level 2 Heading</h2>
+                    <h3>Level 3 Heading</h3>
+                    <h4>Level 4 Heading</h4>
+                    <h5>Level 5 Heading</h5>
+                    <h6>Level 6 Heading</h6>
                 </div>
                 <div class="sample">
                     <p>This is a paragraph sample. Paragraphs are made up of a series of sentences. 
@@ -134,17 +160,18 @@
                         as a <a href="#">Link</a>.</p>
                 </div>
                 <div class="sample">
-                    <p id="short">This paragraph uses a short line length. Its intended 
+                    <p class="short">This paragraph uses a short line length. Its intended 
                         use is either for small screens, narrow content, or as supporting text.</p>
-                    <p id="medium">This paragraph uses our standard (or medium) line length. 
+                    <p class="medium">This paragraph uses our standard (or medium) line length. 
                         It is intended for use in most scenarios, on medium and large 
                         size devices for paragraphs, headings, and most other typography.</p>
-                    <p id="long">This paragraph has a long line length. It should be used very 
+                    <p class="long">This paragraph has a long line length. It should be used very 
                         sparingly, with its ideal use being important headings or callouts.</p>
                 </div>
+                <hr>
                 <div class="sample">
-                    <table>
-                        <caption>Responsive Typography Scale Samples</caption>
+                    <table id="type-table">
+                        <caption class="metadata">Responsive Typography Scale Samples</caption>
                         <thead>
                             <tr>
                                 <th>Type</th>
@@ -155,51 +182,51 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Body</td>
-                                <td>sm size</td>
-                                <td>med size</td>
-                                <td>large size</td>
+                                <td class="code">Body</td>
+                                <td class="body-small">Text</td>
+                                <td class="body-medium">Text</td>
+                                <td class="body-large">Text</td>
                             </tr>
                             <tr>
-                                <td>Heading 3</td>
-                                <td>sm size</td>
-                                <td>med size</td>
-                                <td>large size</td>
+                                <td class="code">Heading 3</td>
+                                <td class="h3-small">Text</td>
+                                <td class="h3-medium">Text</td>
+                                <td class="h3-large">Text</td>
                             </tr>
                             <tr>
-                                <td>Heading 2</td>
-                                <td>sm size</td>
-                                <td>med size</td>
-                                <td>large size</td>
+                                <td class="code">Heading 2</td>
+                                <td class="h2-small">Text</td>
+                                <td class="h2-medium">Text</td>
+                                <td class="h2-large">Text</td>
                             </tr>
                             <tr>
-                                <td>Heading 1</td>
-                                <td>sm size</td>
-                                <td>med size</td>
-                                <td>large size</td>
+                                <td class="code">Heading 1</td>
+                                <td class="h1-small">Text</td>
+                                <td class="h1-medium">Text</td>
+                                <td class="h1-large">Text</td>
                             </tr>
                             <tr>
-                                <td>Metadata</td>
-                                <td>sm size</td>
-                                <td>med size</td>
-                                <td>large size</td>
+                                <td class="code">Metadata</td>
+                                <td class="meta-small">Text</td>
+                                <td class="meta-medium">Text</td>
+                                <td class="meta-large">Text</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+                <hr>
                 <div class="sample">
-                    <h2>Regular Heading Text</h2>
+                    <h2>Preferred Heading Text</h2>
                     <h2 class="fallback1-display">First Fallback Heading</h2>
-                    <h2 class="fallback2-display">Second Fallback Heading</h2>
-                    <h2 class="fallback1-display">Default Fallback Heading</h2>
-                    <p>Regular body text sample.</p>
+                    <h2 class="default-display">Default Fallback Heading</h2>
+                    <p>Preferred body text sample.</p>
                     <p class="fallback1-body">First fallback body text sample.</p>
-                    <p class="fallback2-body">Second fallback body text sample.</p>
                     <p class="default-body">Default fallback body text sample.</p>
                 </div>
             </section>
             <section class="card" id="S4">
                 <h2>Actions and States</h2>
+                <hr>
                 <p><a href="#s4">Text Link</a></p>
                 <div class="sample">
                     <div>
@@ -222,6 +249,7 @@
             </section>
             <section class="card" id="S5">
                 <h2>Surfaces and Content Patterns</h2>
+                <hr>
                 <div class="card">
                     <h3>Heading</h3>
                     <span class="metadata">Subheading</span>
@@ -243,6 +271,7 @@
             </section>
             <section class="card">
                 <h2>Control Foundations</h2>
+                <hr>
                 <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
                     <label for="name">This is a Label</label>
                     <input type="text" name="name" id="name" placeholder="This is a text input.">
